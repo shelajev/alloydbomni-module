@@ -15,7 +15,7 @@ public class AlloyDBOmniContainer extends GenericContainer<AlloyDBOmniContainer>
         dockerImageName.assertCompatibleWith(DockerImageName.parse("google/alloydbomni"));
         withExposedPorts(5432);
 
-        waitingFor(Wait.forLogMessage(".*Post startup helper completed.*\\s", 1));
+        waitingFor(Wait.forLogMessage(".*Post startup helper completed.*\\s", 2));
     }
 
     @Override
